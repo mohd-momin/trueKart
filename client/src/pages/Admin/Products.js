@@ -39,7 +39,7 @@ const Products = () => {
               >
                 <div className="card m-2" style={{ width: "18rem",height: "500px", overflow: "hidden"}}>
                   <img
-                    src={`/api/v1/product/product-photo/${p._id}`}
+                    src={`https://truekart.onrender.com/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top" style={{height: "250px"}}
                     alt={p.name}
                   />

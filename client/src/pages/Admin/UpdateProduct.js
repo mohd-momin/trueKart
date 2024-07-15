@@ -153,7 +153,7 @@ const UpdateProduct = () => {
                 ) : (
                   <div className="text-center">
                     <img
-                      src={`/api/v1/product/product-photo/${id}`}
+                      src={`https://truekart.onrender.com/api/v1/product/product-photo/${p._id}`}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive"
