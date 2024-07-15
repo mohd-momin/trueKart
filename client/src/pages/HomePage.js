@@ -6,6 +6,7 @@ import { useCart } from "../context/cart";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
+import SliderComponent from '../components/Layout/Slider';
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
 
@@ -107,15 +108,17 @@ const HomePage = () => {
     }
   };
   return (
-    <Layout title={"ALl Products - Best offers "}>
+    <Layout title={"TrueKart"}>
       {/* banner image */}
       <img
-        src="/images/banner.png"
+        src="/images/banner.jpg"
         className="banner-img"
         alt="bannerimage"
         width={"100%"}
       />
       {/* banner image */}
+      {/* Slider */}
+      {/* <SliderComponent /> */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
           <h4 className="text-center">Filter By Category</h4>
@@ -165,7 +168,7 @@ const HomePage = () => {
                     <h5 className="card-title card-price">
                       {p.price.toLocaleString("en-US", {
                         style: "currency",
-                        currency: "USD",
+                        currency: "INR",
                       })}
                     </h5>
                   </div>

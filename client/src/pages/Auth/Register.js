@@ -105,7 +105,7 @@ const Register = () => {
               onChange={(e) => setAnswer(e.target.value)}
               className="form-control"
               id="exampleInputEmail1"
-              placeholder="What is Your Favorite sports"
+              placeholder="Add Security Answer"
               required
             />
           </div>

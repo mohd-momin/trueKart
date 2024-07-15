@@ -3,8 +3,11 @@ import Layout from "./../components/Layout/Layout";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/ProductDetailsStyles.css";
+import toast from "react-hot-toast";
+import { useCart } from "../context/cart";
 
 const ProductDetails = () => {
+  const [cart, setCart] = useCart();
   const params = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
@@ -45,7 +48,7 @@ const ProductDetails = () => {
             src={`/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
             alt={product.name}
-            height="300"
+            // height={"400px"}
             width={"350px"}
           />
         </div>
@@ -58,11 +61,24 @@ const ProductDetails = () => {
             Price :
             {product?.price?.toLocaleString("en-US", {
               style: "currency",
-              currency: "USD",
+              currency: "INR",
             })}
           </h6>
           <h6>Category : {product?.category?.name}</h6>
-          <button class="btn btn-secondary ms-1">ADD TO CART</button>
+          {/* <button class="btn btn-secondary ms-1">ADD TO CART</button> */}
+          <button
+                      className="btn btn-dark ms-1"
+                      onClick={() => {
+                        setCart([...cart, product]);
+                        localStorage.setItem(
+                          "cart",
+                          JSON.stringify([...cart, product])
+                        );
+                        toast.success("Item Added to cart");
+                      }}
+                    >
+                      ADD TO CART
+          </button>
         </div>
       </div>
       <hr />
@@ -85,7 +101,7 @@ const ProductDetails = () => {
                   <h5 className="card-title card-price">
                     {p.price.toLocaleString("en-US", {
                       style: "currency",
-                      currency: "USD",
+                      currency: "INR",
                     })}
                   </h5>
                 </div>

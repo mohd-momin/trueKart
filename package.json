@@ -28,6 +28,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
     "react-icons": "^4.7.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
     "slugify": "^1.6.5"
   }
 }
