@@ -1,6 +1,7 @@
 # TrueKart E-Commerce Platform
 
 TrueKart is a robust and user-friendly e-commerce platform designed to deliver a seamless shopping experience for users while providing an efficient management system for vendors. The platform is built using the MERN stack, which includes ReactJS, NodeJS, MongoDB, and ExpressJS.
+[Link to TrueKart](https://truekart-deployment.onrender.com/)
 
 ## Table of Contents
 
